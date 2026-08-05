@@ -20,8 +20,8 @@ Insert into emp values
 (105,'Rohan','Deshmukh','M',30,'Aurangabad','2019-08-12',38000);
 
 SELECT * FROM emp;
-
-will be:
+//output
+//will be:
 
 id   	name	surname    	gender	age    	area	    doj	        salary
 101  	Rahul	Sharma	    M	    25	    Pune	    2021-06-15	32000
