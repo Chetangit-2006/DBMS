@@ -31,3 +31,13 @@ FROM emp
 WHERE age >= 26
    OR salary >= 33000
 ORDER BY salary DESC;
+//input:
+//output:
+Output
+name	salary
+Neha	42000
+Rohan	38000
+Karan	36000
+Anita	35000
+Amit	34000
+Sneha	33000
