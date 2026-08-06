@@ -41,3 +41,8 @@ Karan	36000
 Anita	35000
 Amit	34000
 Sneha	33000
+//or:
+SELECT name, salary
+FROM emp
+WHERE age >= 26 OR salary >= 33000
+ORDER BY salary DESC;
