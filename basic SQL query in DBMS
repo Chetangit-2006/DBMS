@@ -13,3 +13,14 @@ CREATE TABLE emp(
 
 
 #2. Data Insertion
+INSERT INTO emp VALUES
+(101,'Rahul','Sharma','M',25,'Pune','2021-06-15',32000),
+(102,'Anita','Patil','F',28,'Mumbai','2020-04-10',40000),
+(103,'Rohan','Kale','M',30,'Nagpur','2019-08-12',50000),
+(104,'Sneha','Joshi','F',22,'Nashik','2022-01-18',28000),
+(105,'Sagar','Deshmukh','M',35,'Pune','2018-09-25',60000);
+
+
+#3. Retrieve Employees by Age or Salary Condition
+SELECT * FROM emp
+WHERE age > 30 OR salary > 50000;
