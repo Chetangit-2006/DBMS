@@ -50,3 +50,8 @@ WHERE salary BETWEEN 30000 AND 50000;
 #8. Retrieve Employees by Age or Salary Condition
 SELECT * FROM emp
 WHERE age >= 30 OR salary >= 50000;
+
+
+#9. Retrieve Employees Whose Name Starts with R or S
+SELECT * FROM emp
+WHERE name LIKE 'R%' OR name LIKE 'S%';
