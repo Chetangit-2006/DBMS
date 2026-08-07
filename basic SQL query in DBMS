@@ -35,3 +35,18 @@ WHERE age > 25 AND salary > 35000;
 #5. Retrieve Employee Details Using LIKE Operator
 SELECT * FROM emp
 WHERE name LIKE 'R%';
+
+
+#6. Retrieve Employee Details Using IN Operator
+SELECT * FROM emp
+WHERE area IN ('Pune', 'Mumbai');
+
+
+#7. Retrieve Employee Details Using BETWEEN Operator
+SELECT * FROM emp
+WHERE salary BETWEEN 30000 AND 50000;
+
+
+#8. Retrieve Employees by Age or Salary Condition
+SELECT * FROM emp
+WHERE age >= 30 OR salary >= 50000;
