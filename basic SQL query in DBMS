@@ -24,3 +24,14 @@ INSERT INTO emp VALUES
 #3. Retrieve Employees by Age or Salary Condition
 SELECT * FROM emp
 WHERE age > 30 OR salary > 50000;
+
+
+#4. Retrieve Employee Name and Salary Using AND Condition
+SELECT name, salary
+FROM emp
+WHERE age > 25 AND salary > 35000;
+
+
+#5. Retrieve Employee Details Using LIKE Operator
+SELECT * FROM emp
+WHERE name LIKE 'R%';
