@@ -55,3 +55,41 @@ WHERE age >= 30 OR salary >= 50000;
 #9. Retrieve Employees Whose Name Starts with R or S
 SELECT * FROM emp
 WHERE name LIKE 'R%' OR name LIKE 'S%';
+
+//
+-- Topic 1: Create and Populate Employee Table
+
+CREATE TABLE Employee (
+    EmpID INT PRIMARY KEY,
+    EmpName VARCHAR(50),
+    Company VARCHAR(50),
+    Department VARCHAR(30),
+    Salary DECIMAL(10,2),
+    Location VARCHAR(30)
+);
+
+INSERT INTO Employee VALUES
+(101,'Rahul','Infosys','IT',45000,'Pune'),
+(102,'Sneha','TCS','HR',40000,'Mumbai'),
+(103,'Amit','Infosys','IT',55000,'Pune'),
+(104,'Priya','Wipro','Finance',50000,'Bangalore'),
+(105,'Rohan','Infosys','Testing',60000,'Hyderabad'),
+(106,'Neha','TCS','IT',52000,'Mumbai'),
+(107,'Karan','Wipro','HR',47000,'Pune'),
+(108,'Anjali','Infosys','Finance',65000,'Bangalore'),
+(109,'Vikas','Capgemini','IT',58000,'Pune'),
+(110,'Pooja','Capgemini','Testing',49000,'Mumbai');
+
+//
+-- Topic 2: Find Average Salary Paid by Infosys
+
+SELECT AVG(Salary) AS Average_Salary
+FROM Employee
+WHERE Company = 'Infosys';
+
+//
+-- Topic 3: Find Total Salary Paid to Employees Working in Infosys
+
+SELECT SUM(Salary) AS Total_Salary
+FROM Employee
+WHERE Company = 'Infosys';
