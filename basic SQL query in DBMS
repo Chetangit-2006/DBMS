@@ -119,3 +119,18 @@ HAVING SUM(Salary) > 150000;
 SELECT Company, MAX(Salary) AS Maximum_Salary
 FROM Employee
 GROUP BY Company;
+
+
+-- Topic 8: Display Companies Having Maximum Salary Greater Than 60000
+
+SELECT Company, MAX(Salary) AS Maximum_Salary
+FROM Employee
+GROUP BY Company
+HAVING MAX(Salary) > 60000;
+
+-- Topic 9: Retrieve Total Employees Based on Salary and Location Criteria
+
+SELECT COUNT(*) AS Total_Employees
+FROM Employee
+WHERE Salary > 50000
+AND Location = 'Pune';
