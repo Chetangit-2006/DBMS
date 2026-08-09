@@ -98,3 +98,24 @@ WHERE Company = 'Infosys';
 
 SELECT COUNT(*) AS Total_Employees
 FROM Employee;
+
+
+-- Topic 5: Display Companies Based on Total Salary
+
+SELECT Company, SUM(Salary) AS Total_Salary
+FROM Employee
+GROUP BY Company;
+
+
+-- Topic 6: Display Companies Having Total Salary Greater Than 150000
+
+SELECT Company, SUM(Salary) AS Total_Salary
+FROM Employee
+GROUP BY Company
+HAVING SUM(Salary) > 150000;
+
+-- Topic 7: Display Companies Based on Maximum Salary
+
+SELECT Company, MAX(Salary) AS Maximum_Salary
+FROM Employee
+GROUP BY Company;
