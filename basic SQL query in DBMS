@@ -89,7 +89,12 @@ WHERE Company = 'Infosys';
 
 //
 -- Topic 3: Find Total Salary Paid to Employees Working in Infosys
-
 SELECT SUM(Salary) AS Total_Salary
 FROM Employee
 WHERE Company = 'Infosys';
+
+
+-- Topic 4: Find Total Number of Employees
+
+SELECT COUNT(*) AS Total_Employees
+FROM Employee;
