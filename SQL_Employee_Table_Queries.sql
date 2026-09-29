@@ -72,32 +72,28 @@ WHERE age BETWEEN 25 AND 27;
 
 
 
--- ============================================================
--- EXPERIMENT 7
--- Retrieve Employees by Age or Salary Condition
--- ============================================================
 
--- Select all employee details
+
+//Retrieve Employees by Age or Salary Condition
+//Select all employee details
 SELECT *
 
--- Select data from the employee table
+//Select data from the employee table
 FROM emp
 
--- Apply either of the following conditions:
--- 1. Age should be less than 30
--- 2. Salary should be less than 35000
+//Apply either of the following conditions:
+//1. Age should be less than 30
+//2. Salary should be less than 35000
 WHERE age < 30 OR salary < 35000;
 
-
--- Expected Output:
--- 101  Rahul  Sharma    M  25  Pune    2021-06-15  32000
--- 102  Anita  Patil     F  28  Mumbai  2020-03-10  35000
--- 103  Amit   Verma     M  24  Nagpur  2022-01-05  34000
--- 104  Sneha  Kulkarni  F  26  Nashik  2021-11-20  33000
-
+// Expected Output:
+ 101  Rahul  Sharma    M  25  Pune    2021-06-15  32000
+ 102  Anita  Patil     F  28  Mumbai  2020-03-10  35000
+103  Amit   Verma     M  24  Nagpur  2022-01-05  34000
+ 104  Sneha  Kulkarni  F  26  Nashik  2021-11-20  33000
 
 
--- ============================================================
+
 -- EXPERIMENT 8
 -- Retrieve Employees Whose Names Start with R or S
 -- ============================================================
