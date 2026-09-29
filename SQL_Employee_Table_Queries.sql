@@ -1,6 +1,6 @@
 
 #PostgreSQL SQL Programs
--- Retrieve Employee Name and Salary Using AND Condition
+Retrieve Employee Name and Salary Using AND Condition
 //Select employee name and salary
 SELECT name, salary
 
@@ -94,22 +94,19 @@ WHERE age < 30 OR salary < 35000;
 
 
 
--- EXPERIMENT 8
--- Retrieve Employees Whose Names Start with R or S
--- ============================================================
-
--- Select all employee details
+//Retrieve Employees Whose Names Start with R or S
+// Select all employee details
 SELECT *
 
--- Select data from the employee table
+//Select data from the employee table
 FROM emp
 
--- Display employees whose name starts with either 'R' or 'S'
--- '%' represents any number of characters after R or S
+0/Display employees whose name starts with either 'R' or 'S'
+//'%' represents any number of characters after R or S
 WHERE name LIKE 'R%' OR name LIKE 'S%';
 
 
--- Expected Output:
--- 101  Rahul  Sharma    M  25  Pune        2021-06-15  32000
--- 104  Sneha  Kulkarni  F  26  Nashik      2021-11-20  33000
--- 105  Rohan  Deshmukh  M  30  Aurangabad  2019-08-12  38000
+Expected Output:
+ 101  Rahul  Sharma    M  25  Pune        2021-06-15  32000
+104  Sneha  Kulkarni  F  26  Nashik      2021-11-20  33000
+105  Rohan  Deshmukh  M  30  Aurangabad  2019-08-12  38000
