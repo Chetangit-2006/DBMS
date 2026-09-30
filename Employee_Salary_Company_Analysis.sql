@@ -1,11 +1,7 @@
--- ============================================================
 -- EMPLOYEE AND COMPANY SALARY ANALYSIS
--- ============================================================
 
 
--- ============================================================
 -- 1. CREATE EMPLOYEE TABLE
--- ============================================================
 
 CREATE TABLE Employee (
     emp_id INT PRIMARY KEY,
@@ -16,9 +12,7 @@ CREATE TABLE Employee (
 );
 
 
--- ============================================================
 -- 2. POPULATE EMPLOYEE TABLE
--- ============================================================
 
 INSERT INTO Employee (emp_id, emp_name, company, salary, location)
 VALUES
@@ -34,37 +28,29 @@ VALUES
 (10, 'Anjali', 'Wipro', 55000, 'Pune');
 
 
--- ============================================================
 -- 3. FIND AVERAGE SALARY PAID BY INFOSYS
--- ============================================================
 
 SELECT AVG(salary) AS Average_Salary
 FROM Employee
 WHERE company = 'Infosys';
 
 
--- ============================================================
 -- 4. FIND TOTAL SALARY PAID TO EMPLOYEES WORKING IN INFOSYS
--- ============================================================
 
 SELECT SUM(salary) AS Total_Salary
 FROM Employee
 WHERE company = 'Infosys';
 
 
--- ============================================================
 -- 5. FIND TOTAL NUMBER OF EMPLOYEES IN SYNTEL
--- ============================================================
 
 SELECT COUNT(*) AS Total_Employees
 FROM Employee
 WHERE company = 'Syntel';
 
 
--- ============================================================
 -- 6. DISPLAY COMPANIES BASED ON TOTAL SALARY CONDITION
 --    Example: Companies having total salary greater than 100000
--- ============================================================
 
 SELECT company, SUM(salary) AS Total_Salary
 FROM Employee
@@ -72,10 +58,8 @@ GROUP BY company
 HAVING SUM(salary) > 100000;
 
 
--- ============================================================
 -- 7. DISPLAY COMPANIES BASED ON MAXIMUM SALARY CONDITION
 --    Example: Companies having maximum salary greater than 60000
--- ============================================================
 
 SELECT company, MAX(salary) AS Maximum_Salary
 FROM Employee
@@ -83,10 +67,8 @@ GROUP BY company
 HAVING MAX(salary) > 60000;
 
 
--- ============================================================
 -- 8. RETRIEVE TOTAL EMPLOYEES BASED ON SALARY AND LOCATION
 --    Example: Salary greater than 50000 and location is Pune
--- ============================================================
 
 SELECT COUNT(*) AS Total_Employees
 FROM Employee
@@ -94,16 +76,10 @@ WHERE salary > 50000
 AND location = 'Pune';
 
 
--- ============================================================
 -- 9. DISPLAY EMPLOYEE DETAILS BASED ON SALARY AND LOCATION
--- ============================================================
 
 SELECT *
 FROM Employee
 WHERE salary > 50000
 AND location = 'Pune';
 
-
--- ============================================================
--- END OF PROGRAM
--- ============================================================
