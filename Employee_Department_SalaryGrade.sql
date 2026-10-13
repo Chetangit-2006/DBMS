@@ -1,4 +1,4 @@
--- =========================================================
+
 -- PRACTICAL 4: EMPLOYEE, DEPARTMENT AND SALARY GRADE
 
 
@@ -62,9 +62,7 @@ INSERT INTO EMPLOYEE VALUES
 SELECT * FROM EMPLOYEE;
 
 
--- =========================================================
 -- 2. CREATE AND DISPLAY DEPARTMENT TABLE
--- =========================================================
 
 CREATE TABLE DEPARTMENT (
     DEPTNO NUMBER(2) PRIMARY KEY,
@@ -81,9 +79,8 @@ INSERT INTO DEPARTMENT VALUES (40, 'OPERATIONS', 'BOSTON');
 SELECT * FROM DEPARTMENT;
 
 
--- =========================================================
 -- 3. CREATE AND DISPLAY SALGRADE TABLE
--- =========================================================
+
 
 CREATE TABLE SALGRADE (
     GRADE NUMBER,
@@ -101,9 +98,9 @@ INSERT INTO SALGRADE VALUES (5, 3001, 9999);
 SELECT * FROM SALGRADE;
 
 
--- =========================================================
+
 -- 4. GET EMPLOYEE NAMES AND THEIR DEPARTMENTS
--- =========================================================
+
 
 SELECT E.ENAME, D.DNAME
 FROM EMPLOYEE E
@@ -111,9 +108,9 @@ JOIN DEPARTMENT D
 ON E.DEPTNO = D.DEPTNO;
 
 
--- =========================================================
+
 -- 5. DISPLAY SALARY GRADE OF EACH EMPLOYEE
--- =========================================================
+
 
 SELECT E.ENAME, E.SAL, S.GRADE
 FROM EMPLOYEE E
@@ -121,9 +118,8 @@ JOIN SALGRADE S
 ON E.SAL BETWEEN S.LOSAL AND S.HISAL;
 
 
--- =========================================================
 -- 6. DISPLAY EMPLOYEE NAME ALONG WITH MANAGER NAME
--- =========================================================
+
 
 SELECT E.ENAME AS EMPLOYEE_NAME,
        M.ENAME AS MANAGER_NAME
@@ -132,10 +128,7 @@ LEFT JOIN EMPLOYEE M
 ON E.MGR = M.EMPNO;
 
 
--- =========================================================
 -- 7. DISPLAY EMPLOYEES WITHOUT ANY DEPARTMENT
--- =========================================================
-
 SELECT E.ENAME, E.DEPTNO
 FROM EMPLOYEE E
 LEFT JOIN DEPARTMENT D
@@ -143,9 +136,8 @@ ON E.DEPTNO = D.DEPTNO
 WHERE D.DEPTNO IS NULL;
 
 
--- =========================================================
 -- 8. DISPLAY EMPLOYEE SALARY GRADE
--- =========================================================
+
 
 SELECT E.ENAME, E.SAL, S.GRADE
 FROM EMPLOYEE E
@@ -154,10 +146,10 @@ ON E.SAL BETWEEN S.LOSAL AND S.HISAL
 ORDER BY S.GRADE;
 
 
--- =========================================================
+
 -- 9. DISPLAY EMPLOYEES WITHOUT ANY DEPARTMENT
 --    (ALTERNATIVE METHOD USING NOT EXISTS)
--- =========================================================
+
 
 SELECT E.ENAME, E.DEPTNO
 FROM EMPLOYEE E
@@ -167,6 +159,4 @@ WHERE NOT EXISTS (
     WHERE D.DEPTNO = E.DEPTNO
 );
 
--- =========================================================
--- END OF PRACTICAL 4
--- =========================================================
+
